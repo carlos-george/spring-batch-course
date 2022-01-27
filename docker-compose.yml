@@ -1,0 +1,13 @@
+version: "3.2"
+
+services:
+  batch-db:
+    container_name: batch-db
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "batch_repo"
+    ports:
+      - "3307:3306"
+    volumes:
+      - "./.batch:/var/lib/mysql"

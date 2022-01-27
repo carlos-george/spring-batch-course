@@ -1,0 +1,20 @@
+
+spring:
+  application:
+    name: spring-batch-course
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/batch_repo
+    username: batch_user
+    password: 123456
+  sql:
+    init:
+      platform: mysql
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: false
+
+server:
+  port: 8085
